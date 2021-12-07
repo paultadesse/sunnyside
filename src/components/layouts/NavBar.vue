@@ -1,7 +1,7 @@
 <template lang="">
-  <div
+  <div id="tt"
     class="h-screen w-full bg-bottom bg-cover bg-no-repeat"
-    style="background-image: url(src/assets/images/desktop/image-header.jpg)"
+    :style="{backgroundImage: `url(${bgImg})`}"
   >
     <div class="flex justify-between items-center p-10 text-white">
       <div class="font-bold text-2xl md:text-3xl font-readexpro">
@@ -123,8 +123,10 @@
   </div>
 </template>
 <script setup>
+import Image from "../../assets/images/desktop/image-header.jpg"
 import { ref } from "@vue/reactivity";
 
 const humburgerClicked = ref(false);
+const bgImg = ref(Image);
 </script>
 <style lang=""></style>
